@@ -15,11 +15,11 @@ fileIds is only used if an image is provided. If an image is not attached, it wi
 Text will show in the form of a string if provided, and if not, will show as null.
 # Reaction Acceptance
 reactionAcceptance accepts input in the form of these options:
-- nonSensitiveOnlyForLocalLikeOnlyForRemote
-- null (all)
-- likeOnlyForRemote
-- likeOnly
-- nonSensitiveOnly
+- nonSensitiveOnlyForLocalLikeOnlyForRemote (Non-sensitive only (Only likes from remote))
+- null (All)
+- likeOnlyForRemote (All (Only likes for remote instances))
+- likeOnly (Only likes)
+- nonSensitiveOnly (Non-sensitive only)
 # Polls
 Polls come in this format:
 {
@@ -40,3 +40,4 @@ Polls come in this format:
 }
 expiredAfter takes time in milliseconds. For example, 6 seconds would be 6000 ms.
 expiresAt takes in Unix timestamps. For example, 1767160800000 is December 31st, 2025 at 12:00 AM.
+If no poll is provided, null is used instead of the poll object.
