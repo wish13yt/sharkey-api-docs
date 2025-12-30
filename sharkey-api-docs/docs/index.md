@@ -1,17 +1,8 @@
-# Welcome to MkDocs
-
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
-
-## Commands
-
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+# The Unofficial Sharkey API Docs
+These are the very cool Sharkey API docs since I couldn't find any.
+Not made by the Sharkey team :)
+Navigate via the sidebar!
+I'm only one person, and I'm not that experienced with server stuff. Some details may be left out or inaccurate!
+# Credits
+Sharkey team; for making the thingy
+Nomaakip; for starting an instance of Sharkey which is how I found out.

@@ -1,1 +1,4 @@
 site_name: The Unofficial Sharkey API Docs
+nav:
+  - Home: index.md
+  - Posting (notes/create): posting.md
