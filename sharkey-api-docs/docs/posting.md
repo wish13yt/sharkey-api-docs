@@ -45,3 +45,9 @@ Polls come in this format:
 expiredAfter takes time in milliseconds. For example, 6 seconds would be 6000 ms.
 expiresAt takes in Unix timestamps. For example, 1767160800000 is December 31st, 2025 at 12:00 AM.
 If no poll is provided, null is used instead of the poll object.
+# Content Warnings
+The cw field accepts a string and will prevent viewing of a post until you click on "Show content"
+The string in the cw field will be shown even without clicking on Show content.
+# Defederation
+localOnly accepts a boolean, and if true, will not show your post to other instances of Sharkey and other ActivityPub servers.
+This also shows a rocket ship icon next to the time counter on your post.
