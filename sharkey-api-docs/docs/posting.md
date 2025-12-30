@@ -1,5 +1,6 @@
 # Posting
 Posting on Sharkey uses the API URL "/api/notes/create" and takes input via JSON; like this:
+```json
 {
   "text": null,
   "fileIds": [
@@ -10,7 +11,7 @@ Posting on Sharkey uses the API URL "/api/notes/create" and takes input via JSON
   "localOnly": false,
   "visibility": "public",
   "reactionAcceptance": "nonSensitiveOnly"
-}
+}```
 fileIds is only used if an image is provided. If an image is not attached, it will not be in the JSON at all.
 Text will show in the form of a string if provided, and if not, will show as null.
 # Reaction Acceptance
@@ -22,6 +23,7 @@ reactionAcceptance accepts input in the form of these options:
 - nonSensitiveOnly (Non-sensitive only)
 # Polls
 Polls come in this format:
+```json
 {
   "text": "wii sop channel",
   "poll": {
@@ -37,7 +39,7 @@ Polls come in this format:
   "localOnly": false,
   "visibility": "public",
   "reactionAcceptance": "nonSensitiveOnly"
-}
+}```
 expiredAfter takes time in milliseconds. For example, 6 seconds would be 6000 ms.
 expiresAt takes in Unix timestamps. For example, 1767160800000 is December 31st, 2025 at 12:00 AM.
 If no poll is provided, null is used instead of the poll object.
