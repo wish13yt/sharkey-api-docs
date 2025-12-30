@@ -1,6 +1,6 @@
 # Posting
 Posting on Sharkey uses the API URL "/api/notes/create" and takes input via JSON; like this:
-```
+`
 {
   "text": null,
   "fileIds": [
@@ -11,20 +11,25 @@ Posting on Sharkey uses the API URL "/api/notes/create" and takes input via JSON
   "localOnly": false,
   "visibility": "public",
   "reactionAcceptance": "nonSensitiveOnly"
-}```
+}`
 
 fileIds is only used if an image is provided. If an image is not attached, it will not be in the JSON at all.
 Text will show in the form of a string if provided, and if not, will show as null.
 # Reaction Acceptance
 reactionAcceptance accepts input in the form of these options:
+
 - nonSensitiveOnlyForLocalLikeOnlyForRemote (Non-sensitive only (Only likes from remote))
+
 - null (All)
+
 - likeOnlyForRemote (All (Only likes for remote instances))
+
 - likeOnly (Only likes)
+
 - nonSensitiveOnly (Non-sensitive only)
 # Polls
 Polls come in this format:
-```
+`
 {
   "text": "wii sop channel",
   "poll": {
@@ -40,7 +45,7 @@ Polls come in this format:
   "localOnly": false,
   "visibility": "public",
   "reactionAcceptance": "nonSensitiveOnly"
-}```
+}`
 
 expiredAfter takes time in milliseconds. For example, 6 seconds would be 6000 ms.
 expiresAt takes in Unix timestamps. For example, 1767160800000 is December 31st, 2025 at 12:00 AM.
@@ -51,3 +56,20 @@ The string in the cw field will be shown even without clicking on Show content.
 # Defederation
 localOnly accepts a boolean, and if true, will not show your post to other instances of Sharkey and other ActivityPub servers.
 This also shows a rocket ship icon next to the time counter on your post.
+# Visibility
+Visibility accepts the following values:
+
+- public (Public)
+
+- home (Home)
+
+- followers (Followers)
+
+- specified (Direct)
+
+If specified is the input, you provide users who you want to see your post.
+visibleUserIds uses an array of Sharkey user IDs.
+
+This example below shows what it would look like to send it directly to @wish on sharkey.nomaakip.xyz.
+
+`"visibleUserIds":["aguwbbftp7lv000p"]`
