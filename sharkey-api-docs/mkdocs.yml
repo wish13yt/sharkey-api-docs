@@ -2,6 +2,7 @@ site_name: The Unofficial Sharkey API Docs
 nav:
   - Home: index.md
   - Posting (notes/create): posting.md
+  - Show Profile (/users/show): showprof.md
 theme:
   name: material
   palette:
